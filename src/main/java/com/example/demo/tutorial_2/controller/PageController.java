@@ -30,4 +30,18 @@ public class PageController {
         }
         return "challenge";
     }
+
+    @RequestMapping("/generator")
+    public String viralGenerator(
+        @RequestParam(value = "a", required = false, defaultValue = "0") int a,
+        @RequestParam(value = "b", required = false, defaultValue = "0") int b,
+        Model model) {
+            String result = "h" + new String(new char[a<1?1:a]).replace("\0", "m") + " ";
+            result = new String(new char[b<1?1:b]).replace("\0", result);
+            model.addAttribute("a", a);
+            model.addAttribute("b", b);
+            model.addAttribute("result", result);
+            return "viralGenerator";
+        }
+        
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Generator</title>
+    </head>
+    <body>
+        <h1>Viral Generator</h1>
+        <p th:text="'a=' + ${a} + ' b=' + ${b}"></p>
+        <p th:text="${result}"></p>
+        <!-- <span   th:with="c = ${#a<1?1:a}" 
+                th:text="'h' + ${'m' * c} + ' '"
+                th:each="b : ${#numbers.sequence(1, b)}"></p> -->
+    </body>
+</html>
